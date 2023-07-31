@@ -28,8 +28,8 @@
 <%= render @category %>
 
 
-  <%= link_to "Edit this category", edit_category_path(@category),class: "link" %> |
-  <%= link_to "Back to categories", categories_path,class: "link" %>
+  <%= link_to "Edit this category ", edit_category_path(@category),class: "link" %> |
+  <%= link_to "Back to categories ", categories_path,class: "link" %>
    <br><br>
-  <%= button_to "Destroy this category", @category, method: :delete,class: "link" %>
+  <%= button_to "Destroy this category ", @category, method: :delete,class: "link" %>
 </div>
