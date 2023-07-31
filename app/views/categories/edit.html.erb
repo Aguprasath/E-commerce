@@ -1,0 +1,38 @@
+<style>
+    .link {
+        color: black;
+        background-color: lightyellow;
+        padding: 5px 10px;
+        text-decoration: underline;
+        border-radius: 5px;
+        border: 1.5px solid black;
+        font-family: "Lato";
+    }
+    #header{
+        border: 2px solid black;
+        padding: 10px;
+        font-family: "Arial Black";
+        margin: 0 auto;
+    }
+    .m{
+        margin-bottom: 20px;
+    }
+
+    #categories{
+        background-color: lightgray;
+        padding: 20px;
+        font-family: "Roboto Light";
+        border: 1.5px solid black;
+        font-size: 20px;
+    }
+</style>
+<h1 id=header>Editing category</h1>
+
+<%= render "form", category: @category %>
+
+<br>
+
+<div >
+  <%= link_to "Show this category", @category,class:"link" %> |
+  <%= link_to "Back to categories", categories_path,class:"link" %>
+</div>

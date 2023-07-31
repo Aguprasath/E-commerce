@@ -1,0 +1,39 @@
+
+<p style="color: green"><%= notice %></p>
+<style>
+    .link {
+        color: black;
+        background-color: lightyellow;
+        padding: 5px 10px;
+        text-decoration: underline;
+        border-radius: 5px;
+        border: 1.5px solid black;
+        font-family: "Lato";
+    }
+    #header{
+        border: 2px solid black;
+        padding: 10px;
+        font-family: "Arial Black";
+        margin: 0 auto;
+    }
+    .m{
+        margin-bottom: 20px;
+    }
+
+    #products{
+        background-color: lightgray;
+        padding: 20px;
+        font-family: "Roboto Light";
+        border: 1.5px solid black;
+        font-size: 20px;
+    }
+</style>
+<h2 id=header>Product</h2>
+<%= render @product %>
+
+<div id=products>
+  <%= link_to "Edit this product", edit_category_product_path(@product.category,@product),class:"link" %> |
+  <%= link_to "Back to products", category_products_path(@product.category),class:"link" %>
+  <br><br>
+  <%=button_to "Destroy this product",category_product_path(@product.category,@product), method: :delete ,class:"link"%>
+</div>

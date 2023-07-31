@@ -1,0 +1,35 @@
+<style>
+    #header{
+        border: 2px solid black;
+        padding: 10px;
+        font-family: "Arial Black";
+        margin: 0 auto;
+    }
+    .link {
+        color: black;
+        background-color: lightyellow;
+        padding: 5px 10px;
+        text-decoration: underline;
+        border-radius: 5px;
+        border: 1.5px solid black;
+        font-family: "Lato";
+    }
+    #products{
+        background-color: lightgray;
+        padding: 20px;
+        font-family: "Roboto Light";
+        border: 1.5px solid black;
+        font-size: 20px;
+    }
+</style>
+<p style="color: green"><%= notice %></p>
+<h2 id="header">Category</h2>
+<div id="products">
+<%= render @category %>
+
+
+  <%= link_to "Edit this category", edit_category_path(@category),class: "link" %> |
+  <%= link_to "Back to categories", categories_path,class: "link" %>
+   <br><br>
+  <%= button_to "Destroy this category", @category, method: :delete,class: "link" %>
+</div>

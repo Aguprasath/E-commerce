@@ -1,0 +1,48 @@
+<p style="color: green"><%= notice %></p>
+<style>
+    .link {
+        color: black;
+        background-color: lightyellow;
+        padding: 5px 10px;
+        text-decoration: underline;
+        border-radius: 5px;
+        border: 1.5px solid black;
+        font-family: "Lato";
+    }
+    #header{
+        border: 2px solid black;
+        padding: 10px;
+        font-family: "Arial Black";
+        margin: 0 auto;
+    }
+    .m{
+        margin-bottom: 20px;
+    }
+
+    #categories{
+        background-color: lightgray;
+        padding: 20px;
+        font-family: "Roboto Light";
+        border: 1.5px solid black;
+        font-size: 20px;
+    }
+</style>
+<body >
+<h1 id="header">Categories</h1>
+
+<div id="categories">
+  <% @categories.each do |category| %>
+
+    <%= render category %>
+      <p >
+      <%= link_to "Show this category", category ,class: "link" %> <br><br>
+      <%= link_to "Show this category products",category_products_path(category),class: "link" %>
+
+      </p>
+
+  <% end %>
+  <br>
+  <%= link_to "New category", new_category_path,class: "link" %>
+</div>
+
+</body>
